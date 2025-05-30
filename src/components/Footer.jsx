@@ -8,6 +8,7 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Now', path: '/now' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -68,4 +69,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
