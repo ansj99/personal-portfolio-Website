@@ -1,0 +1,100 @@
+import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+
+const HomePage = () => {
+  const socialLinks = [
+    { icon: <FiGithub />, url: 'https://github.com/yourusername' },
+    { icon: <FiLinkedin />, url: 'https://linkedin.com/in/yourusername' },
+    { icon: <FiTwitter />, url: 'https://twitter.com/yourusername' },
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Your Name | Full Stack Developer</title>
+        <meta name="description" content="Full Stack Developer specializing in React, Node.js, and modern web technologies. Building scalable applications with a focus on performance and user experience." />
+        <meta property="og:title" content="Your Name | Full Stack Developer" />
+        <meta property="og:description" content="Full Stack Developer specializing in React, Node.js, and modern web technologies." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Your Name | Full Stack Developer" />
+        <meta name="twitter:description" content="Full Stack Developer specializing in React, Node.js, and modern web technologies." />
+      </Helmet>
+
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <section className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 pt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="text-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
+              >
+                Hi, I'm <span className="text-blue-600 dark:text-blue-400">Your Name</span>
+              </motion.h1>
+              
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8"
+              >
+                I build scalable systems and clean interfaces
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex justify-center space-x-6 mb-12"
+              >
+                {socialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    <span className="text-2xl">{link.icon}</span>
+                  </a>
+                ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="flex justify-center space-x-4"
+              >
+                <Link
+                  to="/projects"
+                  className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  View Projects
+                </Link>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+                >
+                  Download Resume
+                </a>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </motion.main>
+    </>
+  );
+};
+
+export default HomePage; 
