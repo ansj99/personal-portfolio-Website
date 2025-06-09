@@ -7,8 +7,7 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
-import PostOne from './pages/blog/PostOne';
-import PostTwo from './pages/blog/PostTwo';
+import BlogPostTemplate from './pages/blog/BlogPostTemplate';
 import NowPage from './pages/NowPage';
 import NotFound from './pages/NotFound';
 
@@ -23,9 +22,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/building-scalable-web-applications" element={<PostOne />} />
-            <Route path="/blog/future-of-ai-in-software-development" element={<PostTwo />} />
-            <Route path="/blog/optimizing-database-performance" element={<PostOne />} />
+            <Route path="/blog/:slug" element={<BlogPostTemplate />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/now" element={<NowPage />} />
             <Route path="*" element={<NotFound />} />
