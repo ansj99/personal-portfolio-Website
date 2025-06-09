@@ -1,285 +1,230 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { FiGithub, FiLinkedin, FiTwitter, FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight } from 'react-icons/fi';
 import { projects } from '../data/projects';
 import { blogPosts } from '../data/blogPosts';
 
 const HomePage = () => {
-  const socialLinks = [
-    { icon: <FiGithub />, url: 'https://github.com/yourusername' },
-    { icon: <FiLinkedin />, url: 'https://linkedin.com/in/yourusername' },
-    { icon: <FiTwitter />, url: 'https://twitter.com/yourusername' },
-  ];
-
-  // Get the first 2 projects and blog posts
-  const featuredProjects = projects.slice(0, 2);
-  const latestPosts = blogPosts.slice(0, 2);
+  // Get the first 2 projects for preview
+  const previewProjects = projects.slice(0, 2);
+  // Get the first 2 blog posts for preview
+  const recentPosts = blogPosts.slice(0, 2);
 
   return (
     <>
       <Helmet>
-        <title>Your Name | Full Stack Developer</title>
-        <meta name="description" content="Full Stack Developer specializing in React, Node.js, and modern web technologies. Building scalable applications with a focus on performance and user experience." />
-        <meta property="og:title" content="Your Name | Full Stack Developer" />
-        <meta property="og:description" content="Full Stack Developer specializing in React, Node.js, and modern web technologies." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Your Name | Full Stack Developer" />
-        <meta name="twitter:description" content="Full Stack Developer specializing in React, Node.js, and modern web technologies." />
+        <title>John Doe | Software Developer</title>
+        <meta name="description" content="Welcome to my portfolio. I'm a software developer passionate about building clean and scalable applications." />
+        <meta property="og:title" content="John Doe | Software Developer" />
+        <meta property="og:description" content="Welcome to my portfolio. I'm a software developer passionate about building clean and scalable applications." />
       </Helmet>
 
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         {/* Hero Section */}
-        <section className="min-h-[80vh] flex items-center justify-center bg-gray-50 dark:bg-gray-900 pt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
-              >
-                Hi, I'm <span className="text-blue-600 dark:text-blue-400">Your Name</span>
-              </motion.h1>
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8"
-              >
-                I build scalable systems and clean interfaces
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="flex justify-center space-x-6 mb-12"
-              >
-                {socialLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                  >
-                    <span className="text-2xl">{link.icon}</span>
-                  </a>
-                ))}
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex justify-center space-x-4"
-              >
-                <Link
-                  to="/projects"
-                  className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  View Projects
-                </Link>
-                <Link
-                  to="/blog"
-                  className="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
-                >
-                  Read Blog
-                </Link>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Mini About Section */}
-        <section className="py-16 bg-white dark:bg-gray-800">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+        <section className="min-h-screen bg-white dark:bg-gray-900 flex flex-col items-center justify-center text-center px-4 py-16">
+          <div className="max-w-7xl mx-auto">
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                I'm a full-stack developer with a passion for creating efficient, scalable applications. 
-                With expertise in modern web technologies and cloud services, I help businesses transform 
-                their ideas into robust digital solutions.
-              </p>
-              <Link
-                to="/about"
-                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
-              >
-                Learn more about my journey
-                <FiArrowRight className="ml-2" />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Project Preview Section */}
-        <section className="py-16 bg-gray-50 dark:bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+              Hi, I'm John Doe
+            </motion.h1>
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">Here are some of my recent works</p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {featuredProjects.map((project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
-                >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
+              A software developer passionate about building clean, scalable applications and creating intuitive user experiences.
+            </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex justify-center gap-4"
             >
               <Link
                 to="/projects"
-                className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-md"
               >
-                View All Projects
-                <FiArrowRight className="ml-2" />
+                View Projects
               </Link>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Blog Preview Section */}
-        <section className="py-16 bg-white dark:bg-gray-800">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Latest Articles</h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">Insights and thoughts on technology</p>
-            </motion.div>
-
-            <div className="space-y-8 mb-12">
-              {latestPosts.map((post, index) => (
-                <motion.article
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6"
-                >
-                  <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300 mb-2">
-                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
-                      {post.category}
-                    </span>
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {post.excerpt}
-                  </p>
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
-                  >
-                    Read More
-                    <FiArrowRight className="ml-2" />
-                  </Link>
-                </motion.article>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <Link
-                to="/blog"
-                className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Read More Posts
-                <FiArrowRight className="ml-2" />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Contact CTA Section */}
-        <section className="py-16 bg-gray-50 dark:bg-gray-900">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Have an idea? Let's talk.
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-md"
               >
-                Get in Touch
-                <FiArrowRight className="ml-2" />
+                Contact Me
               </Link>
             </motion.div>
           </div>
         </section>
-      </motion.main>
+
+        {/* Featured Projects Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  Featured Projects
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300">
+                  Here are some of my recent works
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {previewProjects.map((project, index) => (
+                  <motion.div
+                    key={project.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+                  >
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex gap-4">
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                        >
+                          Live Demo
+                        </a>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"
+                        >
+                          View Code
+                        </a>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className="text-center mt-12"
+              >
+                <Link
+                  to="/projects"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-md"
+                >
+                  View All Projects
+                  <FiArrowRight className="ml-2" />
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Latest Blog Posts Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+            >
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  Latest Posts
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300">
+                  Recent thoughts and insights
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {recentPosts.map((post, index) => (
+                  <motion.div
+                    key={post.slug}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md text-sm">
+                          {post.category}
+                        </span>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {post.readTime}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {new Date(post.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </span>
+                        <Link
+                          to={`/blog/${post.slug}`}
+                          className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                        >
+                          Read More
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.2 }}
+                className="text-center mt-12"
+              >
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-md"
+                >
+                  View All Posts
+                  <FiArrowRight className="ml-2" />
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

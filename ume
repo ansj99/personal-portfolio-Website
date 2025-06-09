@@ -1,0 +1,56 @@
+[33mcommit b3a4de389354a6bc32dc679a2fc9e2695599e749[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mprop-dev[m[33m)[m
+Author: ansj99 <ansjoju10@gmail.com>
+Date:   Fri May 30 02:24:21 2025 -0400
+
+    design complete
+
+[33mcommit 7e748df48faf9da01ab98f79ad65b4c3a66607b6[m
+Author: ansj99 <ansjoju10@gmail.com>
+Date:   Fri May 30 00:17:09 2025 -0400
+
+    initial dev completed
+
+[33mcommit b1d4d6ab8e1c4d5c25173875d1457a7872287c19[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: ansj99 <132722841+ansj99@users.noreply.github.com>
+Date:   Wed Oct 2 08:20:17 2024 -0400
+
+    first commit
+
+[33mcommit 0a7d759415193742f02d11b2bd60d9906ad915a3[m
+Author: ansj99 <132722841+ansj99@users.noreply.github.com>
+Date:   Mon Jul 29 18:18:29 2024 -0400
+
+    navbar set to be working.
+
+[33mcommit f7c0c99dd48c3fad268cac3e05cd91bf174f11d9[m
+Author: ansj99 <132722841+ansj99@users.noreply.github.com>
+Date:   Mon Jul 29 18:09:42 2024 -0400
+
+    1) Fixed navbar
+    2) hero for home landing page
+    3) Gallery for portfolio Display
+    4)Footer For contact options
+
+[33mcommit a182e60677ad99ec046ec8df5f1327cb88336c9b[m
+Author: ansj99 <132722841+ansj99@users.noreply.github.com>
+Date:   Mon Jul 29 17:09:23 2024 -0400
+
+    Planned a Different approach. Restarting the build from scratch
+
+[33mcommit 35bdbec3f5e2fb257e1a2a6563b9eb926a8f9bb8[m
+Author: ansj99 <132722841+ansj99@users.noreply.github.com>
+Date:   Mon Feb 26 17:48:23 2024 -0500
+
+    Index page content created and appropriate css added
+
+[33mcommit 39975c50894c31892050db7de1b86a100e624495[m
+Author: ansj99 <132722841+ansj99@users.noreply.github.com>
+Date:   Mon Feb 26 16:24:39 2024 -0500
+
+    Addede style.css and linked to html
+
+[33mcommit 2eeb158f9f9ad2577a2d39c0a900c56b205fa0f5[m
+Author: ansj99 <132722841+ansj99@users.noreply.github.com>
+Date:   Mon Feb 26 16:07:51 2024 -0500
+
+    Index.htm created
