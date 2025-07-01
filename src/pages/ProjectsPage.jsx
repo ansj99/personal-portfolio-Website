@@ -63,9 +63,9 @@ const ProjectsPage = () => {
                     <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{project.role}</p>
                   )}
                   <div className="flex space-x-4">
-                    {project.demo && project.demo !== '#' && (
+                    {project.live && project.live !== '#' && (
                       <a
-                        href={project.demo}
+                        href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -73,14 +73,14 @@ const ProjectsPage = () => {
                         Live Demo
                       </a>
                     )}
-                    {project.github && (
+                    {project.source && project.source !== '' && (
                       <a
-                        href={project.github}
+                        href={project.source}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 dark:text-blue-400 hover:underline"
                       >
-                        GitHub
+                        View Code
                       </a>
                     )}
                   </div>

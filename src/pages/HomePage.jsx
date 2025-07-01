@@ -106,22 +106,26 @@ const HomePage = () => {
                         ))}
                       </div>
                       <div className="flex gap-4">
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
-                        >
-                          Live Demo
-                        </a>
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"
-                        >
-                          View Code
-                        </a>
+                        {project.live && project.live !== '#' && (
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                          >
+                            Live Demo
+                          </a>
+                        )}
+                        {project.source && project.source !== '' && (
+                          <a
+                            href={project.source}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"
+                          >
+                            View Code
+                          </a>
+                        )}
                       </div>
                     </div>
                   </motion.div>
