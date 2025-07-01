@@ -10,6 +10,7 @@ import ContactPage from './pages/ContactPage';
 import BlogPostTemplate from './pages/blog/BlogPostTemplate';
 import NowPage from './pages/NowPage';
 import NotFound from './pages/NotFound';
+import PostWhyImDoingThisNow from './pages/blog/PostWhyImDoingThisNow';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:slug" element={<BlogPostTemplate />} />
+            <Route path="/blog/why-im-doing-this-now" element={<PostWhyImDoingThisNow />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/now" element={<NowPage />} />
             <Route path="*" element={<NotFound />} />

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { FiArrowRight } from 'react-icons/fi';
-import { blogPosts } from '../data/blogPosts';
+import { blogPosts, formatDate } from '../data/blogPosts';
 
 const BlogPage = () => {
   return (
@@ -56,14 +56,10 @@ const BlogPage = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 dark:text-gray-400">
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
+                      {formatDate(post.date)}
                     </span>
                     <Link
-                      to={`/blog/${post.slug}`}
+                      to="/blog/why-im-doing-this-now"
                       className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
                     >
                       Read More

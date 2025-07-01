@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import { projects } from '../data/projects';
-import { blogPosts } from '../data/blogPosts';
+import { blogPosts, formatDate } from '../data/blogPosts';
 
 const HomePage = () => {
   // Get the first 2 projects for preview
@@ -189,14 +189,10 @@ const HomePage = () => {
                       </p>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-500 dark:text-gray-400">
-                          {new Date(post.date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                          })}
+                          {formatDate(post.date)}
                         </span>
                         <Link
-                          to={`/blog/${post.slug}`}
+                          to="/blog/why-im-doing-this-now"
                           className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
                         >
                           Read More
