@@ -14,8 +14,10 @@ const BlogPostTemplate = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} | John Doe</title>
+        <title>{post.title} | Ans Joju</title>
         <meta name="description" content={post.excerpt} />
+        <meta property="og:title" content={`${post.title} | Ans Joju`} />
+        <meta property="og:description" content={post.excerpt} />
       </Helmet>
 
       <motion.div

@@ -5,10 +5,10 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About | John Doe</title>
-        <meta name="description" content="Learn more about John Doe - A passionate developer focused on building clean and scalable systems." />
-        <meta property="og:title" content="About | John Doe" />
-        <meta property="og:description" content="Learn more about John Doe - A passionate developer focused on building clean and scalable systems." />
+        <title>About | Ans Joju</title>
+        <meta name="description" content="Learn more about Ans Joju – a web developer and AI enthusiast based in Toronto, Canada. Discover his background, interests, and unique approach to building user-centric platforms and AI-enabled tools." />
+        <meta property="og:title" content="About | Ans Joju" />
+        <meta property="og:description" content="Learn more about Ans Joju – a web developer and AI enthusiast based in Toronto, Canada. Discover his background, interests, and unique approach to building user-centric platforms and AI-enabled tools." />
       </Helmet>
 
       <motion.div
@@ -29,10 +29,15 @@ const AboutPage = () => {
             </h1>
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                I'm a developer who loves building clean and scalable systems. With a passion for creating elegant solutions to complex problems, I focus on writing maintainable code and crafting intuitive user experiences.
+                I'm a web developer with a strong foundation in front-end technologies, startup experience, and a growing passion for AI and automation. Whether I'm building user-facing platforms or experimenting with agentic AI tools, I bring a hands-on, fast-learning mindset to every project. I enjoy solving real-world problems with clean design, efficient code, and curiosity-driven iteration.
               </p>
+              <ul className="list-disc pl-5 text-lg text-gray-600 dark:text-gray-300 mb-6">
+                <li>Building user-centric platforms</li>
+                <li>AI-enabled tools and automations</li>
+                <li>Web apps that solve real-world problems</li>
+              </ul>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                This page will be updated soon with more details about my journey, skills, and experiences in software development.
+                I combine real-world event and security experience with technical projects and startup hustle. I'm adaptable, practical, and detail-oriented — with a habit of picking things up fast in high-pressure environments.
               </p>
             </div>
           </motion.div>

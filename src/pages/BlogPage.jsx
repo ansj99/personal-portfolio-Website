@@ -8,8 +8,10 @@ const BlogPage = () => {
   return (
     <>
       <Helmet>
-        <title>Blog | John Doe</title>
-        <meta name="description" content="Thoughts and insights on web development, technology, and software engineering." />
+        <title>Blog | Ans Joju</title>
+        <meta name="description" content="Thoughts and insights on web development, technology, and AI by Ans Joju." />
+        <meta property="og:title" content="Blog | Ans Joju" />
+        <meta property="og:description" content="Thoughts and insights on web development, technology, and AI by Ans Joju." />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">

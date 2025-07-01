@@ -14,10 +14,10 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>John Doe | Software Developer</title>
-        <meta name="description" content="Welcome to my portfolio. I'm a software developer passionate about building clean and scalable applications." />
-        <meta property="og:title" content="John Doe | Software Developer" />
-        <meta property="og:description" content="Welcome to my portfolio. I'm a software developer passionate about building clean and scalable applications." />
+        <title>Ans Joju – Web Developer </title>
+        <meta name="description" content="Explore the personal portfolio of Ans Joju — a web developer passionate about building practical, user-friendly apps and exploring AI-driven solutions. View projects, get in touch, and learn more about his work in web technologies and automation." />
+        <meta property="og:title" content="Ans Joju – Web Developer " />
+        <meta property="og:description" content="Explore the personal portfolio of Ans Joju — a web developer passionate about building practical, user-friendly apps and exploring AI-driven solutions. View projects, get in touch, and learn more about his work in web technologies and automation." />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -30,7 +30,7 @@ const HomePage = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
-              Hi, I'm John Doe
+              Hi, I'm Ans Joju
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const HomePage = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              A software developer passionate about building clean, scalable applications and creating intuitive user experiences.
+              Web Developer 
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

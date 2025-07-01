@@ -1,26 +1,28 @@
 export const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "/projects/ecommerce.jpg",
-    demo: "https://demo.ecommerce.com",
-    github: "https://github.com/yourusername/ecommerce"
+    title: "AI Store",
+    description: "A secure AI agent execution platform featuring modular memory and security engines designed for scalable, isolated AI workflows.",
+    technologies: ["React.js", "Node.js","Tailwind CSS"],
+    image: "/images/ai-store.png", 
+    demo: "https://www.aistore.live/",
+    role: "Built the front-end using React and Tailwind CSS with animated components and backend API integration."
+  }
+  ,
+  {
+    title: "Hire-a-Chef",
+    description: "A role-based web platform that connects chefs and clients for booking private culinary services.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    image: "/images/hire-a-chef-img.jpg",
+    github: "https://github.com/gokulJinu01/CapstoneProject", 
+    role: "front-end development, implemented role-based routing, dashboards, and interactivity."
   },
   {
-    title: "Task Management System",
-    description: "A collaborative task management platform with real-time updates and team features.",
-    technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-    image: "/projects/taskmanager.jpg",
-    demo: "https://demo.taskmanager.com",
-    github: "https://github.com/yourusername/taskmanager"
-  },
-  {
-    title: "AI Content Generator",
-    description: "An AI-powered content generation tool with customizable templates and export options.",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-    image: "/projects/aicontent.jpg",
-    demo: "https://demo.aicontent.com",
-    github: "https://github.com/yourusername/aicontent"
+    title: "Travel Planner App",
+    description: "A web app to help users plan and organize trips with itinerary tracking.",
+    technologies: ["ASP.NET", "C#", "SQL Server"],
+    image: "/projects/travel-planner.jpg",
+    demo: "#", 
+    github: "", 
+    role: "Backend logic, SQL integration, form validation using C# and MVC."
   }
 ]; 

@@ -1,41 +1,15 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-
-const projects = [
-  {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management and payment processing.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "/projects/ecommerce.jpg",
-    demo: "https://demo.ecommerce.com",
-    github: "https://github.com/yourusername/ecommerce"
-  },
-  {
-    title: "Task Management System",
-    description: "A collaborative task management platform with real-time updates and team features.",
-    technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-    image: "/projects/taskmanager.jpg",
-    demo: "https://demo.taskmanager.com",
-    github: "https://github.com/yourusername/taskmanager"
-  },
-  {
-    title: "AI Content Generator",
-    description: "An AI-powered content generation tool with customizable templates and export options.",
-    technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-    image: "/projects/aicontent.jpg",
-    demo: "https://demo.aicontent.com",
-    github: "https://github.com/yourusername/aicontent"
-  }
-];
+import { projects } from '../data/projects';
 
 const ProjectsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Projects | Your Name</title>
-        <meta name="description" content="Explore my portfolio of web development projects, including full-stack applications, AI solutions, and enterprise systems." />
-        <meta property="og:title" content="Projects | Your Name" />
-        <meta property="og:description" content="Explore my portfolio of web development projects." />
+        <title>Projects | Ans Joju</title>
+        <meta name="description" content="Explore the portfolio of Ans Joju – web developer and AI enthusiast. View real-world projects in web development, automation, and more." />
+        <meta property="og:title" content="Projects | Ans Joju" />
+        <meta property="og:description" content="Explore the portfolio of Ans Joju – web developer and AI enthusiast. View real-world projects in web development, automation, and more." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -85,23 +59,30 @@ const ProjectsPage = () => {
                       </span>
                     ))}
                   </div>
+                  {project.role && (
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{project.role}</p>
+                  )}
                   <div className="flex space-x-4">
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline"
-                    >
-                      GitHub
-                    </a>
+                    {project.demo && project.demo !== '#' && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        GitHub
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.article>

@@ -6,8 +6,10 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>404 - Page Not Found | Your Name</title>
+        <title>404 - Page Not Found | Ans Joju</title>
         <meta name="description" content="The page you're looking for doesn't exist." />
+        <meta property="og:title" content="404 - Page Not Found | Ans Joju" />
+        <meta property="og:description" content="The page you're looking for doesn't exist." />
       </Helmet>
       <motion.main
         initial={{ opacity: 0 }}

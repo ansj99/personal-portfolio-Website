@@ -4,28 +4,31 @@ import { Helmet } from 'react-helmet';
 const NowPage = () => {
   const currentActivities = {
     building: [
-      "Building a real-time collaboration platform using WebRTC and WebSocket",
-      "Developing an AI-powered code review assistant",
-      "Creating a personal finance tracking app with React Native"
+      "Developing the front-end for AI Store using React, Tailwind CSS, and Framer Motion.",
+      "Integrating real-time execution data and memory visualization into a secure agent execution interface.",
+      "Designing UI components that communicate system-level activity and modular logic clearly."
     ],
     learning: [
-      "Deep diving into WebAssembly and Rust for web development",
-      "Exploring advanced TypeScript patterns and best practices",
-      "Studying system design and distributed systems architecture"
+      "Experimenting with workflow automations like email triggers, submission events, and async task flows.",
+      "Exploring design systems and how component architecture scales with project complexity.",
+      
     ],
     sideProjects: [
-      "Contributing to open-source projects in the React ecosystem",
-      "Writing technical blog posts about web development",
-      "Building a community around developer productivity tools"
+      "Managing content for Rail Tech’s social media platforms like LinkedIn and X.",
+      "Planning and designing a dev-focused blog to share insights and frontend practices.",
+      "Exploring the possibilities around secure front-end  development and content creation."
     ]
   };
 
   return (
     <>
       <Helmet>
-        <title>What I'm Doing Now | Your Name</title>
-        <meta name="description" content="Current projects, learning goals, and side projects I'm working on." />
+        <title>Now | Ans Joju</title>
+        <meta name="description" content="What Ans Joju is currently working on — building AI Store, automating workflows, and designing tools for devs." />
+        <meta property="og:title" content="Now | Ans Joju" />
+        <meta property="og:description" content="What Ans Joju is currently working on — building AI Store, automating workflows, and designing tools for devs." />
       </Helmet>
+
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -47,7 +50,7 @@ const NowPage = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-gray-600 dark:text-gray-300 mb-12"
           >
-            This page is inspired by Derek Sivers' "now page" concept. It's a snapshot of what I'm currently focused on, learning, and building.
+            A snapshot of what I’m currently focused on — from platform building to side experimentation.
           </motion.p>
 
           <div className="space-y-12">
@@ -130,7 +133,7 @@ const NowPage = () => {
             transition={{ delay: 1 }}
             className="text-sm text-gray-500 dark:text-gray-400 mt-12"
           >
-            Last updated: {new Date().toLocaleDateString()}
+            Last updated: July 1, 2025
           </motion.p>
         </div>
       </motion.main>
@@ -138,4 +141,4 @@ const NowPage = () => {
   );
 };
 
-export default NowPage; 
+export default NowPage;
