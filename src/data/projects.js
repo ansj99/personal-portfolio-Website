@@ -21,7 +21,6 @@ export const projects = [
     title: "Travel Planner App",
     description: "A web app to help users plan and organize trips with itinerary tracking.",
     technologies: ["ASP.NET", "C#", "SQL Server"],
-    image: "/projects/travel-planner.jpg",
     live: "#", 
     source: "", 
     role: "Backend logic, SQL integration, form validation using C# and MVC."
