@@ -9,7 +9,7 @@ export const projects = [
     role: "Built the front-end using React and Tailwind CSS with animated components and backend API integration."
   },
   {
-    title: "Hire-a-Chef",
+    title: "Hire-A-Chef",
     description: "A role-based web platform that connects chefs and clients for booking private culinary services.",
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
     image: "/images/hire-a-chef-img.jpg",
